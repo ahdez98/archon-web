@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>/* 14-OCT-2026 Andre: public intake paused until rate limiting/abuse protection and payments are in place */
+(function(){var f=window.fetch;window.fetch=function(u,o){var s=String(u&&u.url||u);if(/intake_submissions|guardar_borrador_intake|\/storage\/v1\/object\//.test(s))return Promise.reject(new Error("intake paused"));return f.apply(this,arguments)};})();</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Archon builds operating software in Dubai. It is the system a restaurant runs its night on — the landing page, the QR menu, the kitchen ticket, the printer and an eleven-section owner dashboard, with no commission.">
@@ -1118,7 +1120,8 @@ section[id],main[id]{scroll-margin-top:calc(var(--nav-h) + 1.25rem)}
         <p class="lede">Everything below is what it takes to stand your system up — the address on the ticket, the VAT on the bill, the languages on the menu. It saves as you type, so you can leave and come back on the same device.</p>
       </div>
 
-      <form id="intakeForm" class="intake-grid" novalidate>
+      <div class="lede" style="padding:1.5rem 0;font-size:1.15rem">New self-service sign-ups are paused for now. Write to <a href="mailto:hola@archon-uae.com">hola@archon-uae.com</a> and we will set your restaurant up with you personally.</div>
+      <form id="intakeForm" class="intake-grid" novalidate hidden style="display:none">
         <nav class="steps-rail" id="rail" aria-label="Set-up steps"></nav>
 
         <div>
